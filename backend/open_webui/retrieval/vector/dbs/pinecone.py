@@ -44,7 +44,7 @@ log.setLevel(SRC_LOG_LEVELS["RAG"])
 
 class PineconeClient(VectorDBBase):
     def __init__(self):
-        self.collection_prefix = "open-webui"
+        self.collection_prefix = "akritrim-intelligence"
 
         # Validate required configuration
         self._validate_config()
@@ -64,6 +64,7 @@ class PineconeClient(VectorDBBase):
                 api_key=self.api_key,
                 pool_threads=20,  # Improved connection pool size
                 timeout=30,  # Reasonable timeout for operations
+                source_tag="akritrim-intelligence",
             )
             self.using_grpc = True
             log.info("Using Pinecone gRPC client for optimal performance")

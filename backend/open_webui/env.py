@@ -20,13 +20,13 @@ from open_webui.constants import ERROR_MESSAGES
 # Use .resolve() to get the canonical path, removing any '..' or '.' components
 ENV_FILE_PATH = Path(__file__).resolve()
 
-# OPEN_WEBUI_DIR should be the directory where env.py resides (open_webui/)
-OPEN_WEBUI_DIR = ENV_FILE_PATH.parent
+# AKRITRIM_INTELLIGENCE_DIR should be the directory where env.py resides (akritrim_intelligence/)
+AKRITRIM_INTELLIGENCE_DIR = ENV_FILE_PATH.parent
 
-# BACKEND_DIR is the parent of OPEN_WEBUI_DIR (backend/)
-BACKEND_DIR = OPEN_WEBUI_DIR.parent
+# BACKEND_DIR is the parent of AKRITRIM_INTELLIGENCE_DIR (backend/)
+BACKEND_DIR = AKRITRIM_INTELLIGENCE_DIR.parent
 
-# BASE_DIR is the parent of BACKEND_DIR (open-webui-dev/)
+# BASE_DIR is the parent of BACKEND_DIR (akritrim-intelligence-dev/)
 BASE_DIR = BACKEND_DIR.parent
 
 try:
@@ -110,11 +110,9 @@ for source in log_sources:
 
 log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 
-WEBUI_NAME = os.environ.get("WEBUI_NAME", "Open WebUI")
-if WEBUI_NAME != "Open WebUI":
-    WEBUI_NAME += " (Open WebUI)"
+WEBUI_NAME = os.environ.get("WEBUI_NAME", "akritrim® Intelligence™")
 
-WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
+WEBUI_FAVICON_URL = ""
 
 TRUSTED_SIGNATURE_KEY = os.environ.get("TRUSTED_SIGNATURE_KEY", "")
 
@@ -371,7 +369,7 @@ ENABLE_QUERIES_CACHE = os.environ.get("ENABLE_QUERIES_CACHE", "False").lower() =
 REDIS_URL = os.environ.get("REDIS_URL", "")
 REDIS_CLUSTER = os.environ.get("REDIS_CLUSTER", "False").lower() == "true"
 
-REDIS_KEY_PREFIX = os.environ.get("REDIS_KEY_PREFIX", "open-webui")
+REDIS_KEY_PREFIX = os.environ.get("REDIS_KEY_PREFIX", "akritrim-intelligence")
 
 REDIS_SENTINEL_HOSTS = os.environ.get("REDIS_SENTINEL_HOSTS", "")
 REDIS_SENTINEL_PORT = os.environ.get("REDIS_SENTINEL_PORT", "26379")
