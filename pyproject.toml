@@ -1,6 +1,6 @@
 [project]
-name = "open-webui"
-description = "Open WebUI"
+name = "akritrim-intelligence"
+description = "akritrim® Intelligence™"
 authors = [
     { name = "Timothy Jaeryang Baek", email = "tim@openwebui.com" }
 ]
@@ -157,7 +157,7 @@ all = [
 ]
 
 [project.scripts]
-open-webui = "open_webui:app"
+akritrim-intelligence = "open_webui:app"
 
 [build-system]
 requires = ["hatchling"]
